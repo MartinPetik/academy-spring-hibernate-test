@@ -70,24 +70,22 @@ class BookServiceImplTest {
     Assertions.assertTrue(bookDtos.isEmpty());
   }
 
-  @Test
-  void testSave() {
-    final Book book1 = new Book();
-    book1.setName("Book_9");
-    book1.setId(1L);
-
-    bookService.save(book1);
-
-    assertNotNull(book1);
-    //assertEquals(book1.getName(), .getValue());
-
-    Mockito.when(bookDao.findAll()).thenReturn(books);
-    final List<BookDto> bookDtos = bookService.findAll();
-
-    assertEquals("X_Book_9", bookDtos.get(2).getName());
-
-
-  }
+//  @Test
+//  void testSave() {
+//    final Book book1 = new Book();
+//    book1.setName("Book_9");
+//    book1.setId(1L);
+//
+//    bookService.save(book1);
+//
+//    assertNotNull(book1);
+//    //assertEquals(book1.getName(), .getValue());
+//
+//    Mockito.when(bookDao.findAll()).thenReturn(books);
+//    final List<BookDto> bookDtos = bookService.findAll();
+//
+//    assertEquals("X_Book_9", bookDtos.get(2).getName());
+//  }
 
 
   @BeforeEach
